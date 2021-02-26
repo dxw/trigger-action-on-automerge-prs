@@ -8,7 +8,7 @@ PULLS=$(curl \
   "https://api.github.com/repos/$REPO/pulls" | jq --raw-output '.[] | @base64')
 
 for pull in $PULLS; do
-  json=$(echo -n "$pull" | base64 --decode)
+  json=$(echo -n "$pull" | base64 -d)
   auto_merge=$(echo "$json" | jq -c '.auto_merge')
   ref=$(echo "$json" | jq -c '.head.ref')
   pull_request_number=$(echo "$json" | jq -c '.number')
