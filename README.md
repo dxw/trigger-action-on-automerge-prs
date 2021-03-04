@@ -1,4 +1,4 @@
-# Trigger and action on all open Automerge PRs
+# Trigger an action on all open Automerge PRs
 
 This action triggers a specified action on all open PRs that have been set to
 automerge on a given repo
