@@ -5,6 +5,10 @@ set -e
 PERSONAL_ACCESS_TOKEN=$1
 WORKFLOW=$2
 
+echo "$WORKFLOW"
+echo "$GITHUB_REPOSITORY"
+echo "$PERSONAL_ACCESS_TOKEN"
+
 PULLS=$(curl \
   -H "Accept: application/vnd.github.v3+json" \
   -H "Authorization: token $PERSONAL_ACCESS_TOKEN" \
