@@ -32,7 +32,7 @@ on:
 You can then setup a new action with the following:
 
 ```YAML
-uses: dxw/trigger-action-on-automerge-prs@main
+uses: dxw/trigger-action-on-automerge-prs@v1
 with:
   personal-access-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
   workflow: "run.yml"
@@ -53,7 +53,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run the action
-        uses: dxw/trigger-action-on-automerge-prs@main
+        uses: dxw/trigger-action-on-automerge-prs@v1
         with:
           personal-access-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           workflow: "run.yml"
