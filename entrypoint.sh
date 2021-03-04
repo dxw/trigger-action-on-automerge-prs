@@ -2,10 +2,13 @@
 
 set -e
 
+PERSONAL_ACCESS_TOKEN=$1
+WORKFLOW=$2
+
 PULLS=$(curl \
   -H "Accept: application/vnd.github.v3+json" \
   -H "Authorization: token $PERSONAL_ACCESS_TOKEN" \
-  "https://api.github.com/repos/$REPO/pulls" | jq --raw-output '.[] | @base64')
+  "https://api.github.com/repos/$GITHUB_REPOSITORY/pulls" | jq --raw-output '.[] | @base64')
 
 for pull in $PULLS; do
   json=$(echo -n "$pull" | base64 -d)
@@ -18,7 +21,7 @@ for pull in $PULLS; do
       -X POST \
       -H "Accept: application/vnd.github.v3+json" \
       -H "Authorization: token $PERSONAL_ACCESS_TOKEN" \
-      "https://api.github.com/repos/$REPO/actions/workflows/$WORKFLOW/dispatches" \
+      "https://api.github.com/repos/$GITHUB_REPOSITORY/actions/workflows/$WORKFLOW/dispatches" \
       -d "{\"ref\": $ref, \"inputs\": { \"pr_number\": \"$pull_request_number\"}}"
   fi
 done
