@@ -1,3 +1,5 @@
+[![CI](https://github.com/dxw/trigger-action-on-automerge-prs/actions/workflows/ci.yml/badge.svg)](https://github.com/dxw/trigger-action-on-automerge-prs/actions/workflows/ci.yml)
+
 # Trigger an action on all open Automerge PRs
 
 This action triggers a specified action on all open PRs that have been set to
