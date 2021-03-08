@@ -1,0 +1,32 @@
+{
+  "name": "trigger-action-on-automerge-prs",
+  "version": "1.0.0",
+  "description": "Trigger an action on all PRs with automerge set",
+  "main": "lib/main.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "@actions/github": "^4.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.21.0",
+    "jest": "^26.6.3",
+    "nock": "^13.0.10"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dxw/trigger-action-on-automerge-prs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dxw/trigger-action-on-automerge-prs/issues"
+  },
+  "homepage": "https://github.com/dxw/trigger-action-on-automerge-prs#readme"
+}

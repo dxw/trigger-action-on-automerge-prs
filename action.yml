@@ -1,14 +1,11 @@
 name: "Trigger an action on all PRs with automerge set"
 inputs:
-  personal-access-token:
+  personal_access_token:
     description: "A Github Personal Access Token"
     required: true
   workflow:
     description: "The workflow to trigger (e.g. workflow.yml)"
     required: true
 runs:
-  using: "docker"
-  image: "Dockerfile"
-  args:
-    - ${{ inputs.personal-access-token }}
-    - ${{ inputs.workflow }}
+  using: "node12"
+  main: "lib/main.js"

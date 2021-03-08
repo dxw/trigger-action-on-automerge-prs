@@ -5,7 +5,7 @@ automerge on a given repo
 
 ## Inputs
 
-### `personal-access-token`
+### `personal_access_token`
 
 **Required** A Github Personal Access Token with Repo access
 
