@@ -1,3 +1,3 @@
-const main = require(".lib/main.js")
+const main = require("./main")
 
 main();
